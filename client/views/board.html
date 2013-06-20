@@ -1,0 +1,20 @@
+<template name="currentboard">
+	{{> board board}}
+</template>
+
+<template name="board">
+	<center>
+	<div style="margin:2px;">
+	<a href="/" class="abtn"><b>MeteorPen</b></a> &#183; <b>{{key}}</b> &#183; 
+	<a class="abtn" id="clear">Clear</a><a class="abtn" id="capture">Capture</a> &#183; <nobr><button id="red">..</button><button id="orange">..</button><button id="yellow">..</button><button id="green">..</button></button><button id="blue">..</button></button><button id="purple">..</button><button id="black">..</button></nobr> &#183;
+	<input type="text" name="createboard" id="createboard"><a class="abtn" id="create">New board</a>
+	</div>
+	
+	<div onselectstart="return false;" ondragstart="return false;" >
+
+	{{#constant}}
+	<canvas id="board" {{sizeAttr}} style="border:4px solid;border-color:{{session "color"}};"></canvas>
+	{{/constant}}
+
+	</div>
+</template>

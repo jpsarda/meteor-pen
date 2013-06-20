@@ -1,0 +1,21 @@
+<template name="home">
+
+	<center>
+		<p><b>MeteorPen</b></p>
+		<p>
+			<input type="text" name="createboard" id="createboard"><a class="abtn" id="create">New board</a>
+		</p>
+		<br>
+		<p><b>Latest</b></p>
+		{{#each latestBoards}}
+			{{> boardlink}}
+	  {{/each}}
+	</center>
+
+	<div style="display:none;">{{timer}}</div>
+
+</template>
+
+<template name="boardlink">
+	<a href="/{{key}}"class="abtn" style="margin:2px;color:{{newColor}};">{{key}}</a>
+</template>
